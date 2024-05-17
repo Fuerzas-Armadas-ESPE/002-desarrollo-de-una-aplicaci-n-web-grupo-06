@@ -38,6 +38,7 @@ const Nav = ({ nav }) => {
               key={val.label}
               className={`text-white font-medium hover:text-red-500 text-xl max-lg:text-lg 
               ${openNav ? "max-lg:block" : "max-lg:hidden"}`}
+              onClick={() => setOpenNav(false)}
             >
               <a href={val.href}>{val.label}</a>
             </li>
@@ -48,6 +49,7 @@ const Nav = ({ nav }) => {
                 openNav ? "" : "max-lg:hidden"
               } py-4 px-7 text-xl  text-white bg-[orangered] rounded-sm`}
               href="#inscripcion"
+              onClick={() => setOpenNav(false)}
             >
               <span className="buttonSpan">Inscribete Ahora</span>
             </a>

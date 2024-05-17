@@ -31,7 +31,7 @@ const Nav = ({ nav }) => {
         <ul
           className={`${
             openNav ? "max-lg:bg-[#000000d3] z-50" : ""
-          } flex flex-1 justify-end items-center gap-10 max-xl:gap-7 max-lg:flex-col max-lg:text-white max-lg:pt-5 max-lg:pb-3 max-lg:px-4 max-lg:gap-6 max-lg:absolute max-lg:left-0 max-lg:top-24 max-lg:w-[100%] max-sm:top-20`}
+          } flex flex-1 justify-end items-center gap-10 max-xl:gap-7 max-lg:flex-col max-lg:text-white max-lg:pt-5 max-lg:pb-10 max-lg:px-4 max-lg:gap-6 max-lg:absolute max-lg:left-0 max-lg:top-24 max-lg:w-[100%] max-sm:top-20`}
         >
           {navLinks.map((val) => (
             <li

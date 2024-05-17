@@ -45,13 +45,14 @@ const Nav = ({ nav }) => {
           ))}
           <li>
             <a
-              className={`${
-                openNav ? "" : "max-lg:hidden"
-              } py-4 px-7 text-xl  text-white bg-[orangered] rounded-sm`}
+              className={`${openNav ? "" : "max-lg:hidden"}`}
               href="#inscripcion"
               onClick={() => setOpenNav(false)}
             >
-              <span className="buttonSpan">Inscribete Ahora</span>
+              <button className=" py-4 px-9 text-xl group relative text-white bg-[orangered] rounded-sm">
+                <div className=" buttonDiv"></div>
+                <span className="buttonSpan">INSCRIBETE AHORA</span>
+              </button>
             </a>
           </li>
         </ul>

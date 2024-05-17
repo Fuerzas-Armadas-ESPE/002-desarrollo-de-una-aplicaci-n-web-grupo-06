@@ -19,13 +19,13 @@ import img10 from "../assets/img-21.jpg"
 
 
 export const navLinks = [
-    {label:"Home",href:"#home"},
-    {label:"About",href:"#about"},
-    {label:"Services",href:"#services"},
-    {label:"Schedule",href:"#schedule"},
-    {label:"Gallery",href:"#gallery"},
+    {label:"Inicio",href:"#home"},
+    {label:"Información",href:"#about"},
+    {label:"Servicios",href:"#services"},
+    {label:"Calendario",href:"#schedule"},
+    {label:"Galeria",href:"#gallery"},
     {label:"Blog",href:"#blog"},
-    {label:"Contact",href:"#contact"}
+    {label:"Contacto",href:"#contact"}
 ]
 
 export const services = [

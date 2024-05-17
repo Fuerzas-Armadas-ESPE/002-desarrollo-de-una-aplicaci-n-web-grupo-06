@@ -7,10 +7,9 @@ import Gallery from './Components/Gallery'
 import TeamMembers from './Components/TeamMembers'
 import Offer from './Components/Offer'
 import TimeSchedule from './Components/TimeSchedule'
-import Contact from './Components/Contact'
-import Blog from './Components/Blog'
 import Footer from './Components/Footer'
 import HeroSection from './Components/HeroSection'
+import { ContactUs } from './Components/ContactUs'
 
 const App = () => {
 
@@ -38,8 +37,7 @@ const App = () => {
         <TeamMembers />
         <Offer />
         <TimeSchedule />
-        <Contact />
-        <Blog />
+        <ContactUs />
         <Footer nav={nav}/>
     </div>
   )

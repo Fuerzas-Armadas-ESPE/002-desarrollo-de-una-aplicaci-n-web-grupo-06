@@ -59,6 +59,7 @@ const Gallery = () => {
           <p className=' font text-xl text-slate-200 '>Fitness Body</p>
         </div>
       </div>
+
     </section>
   )
 }

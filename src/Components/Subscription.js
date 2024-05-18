@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import imgForm from "../assets/img-8.jpg"
 
-const Offer = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const Subscription = ({isModalOpen, toggleModal}) => {
   const [formData, setFormData] = useState({
     name: '',
     lastName: '',
@@ -12,10 +11,6 @@ const Offer = () => {
     goal: '',
     membresia: ''
   });
-
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,23 +24,11 @@ const Offer = () => {
     e.preventDefault();
     localStorage.setItem('formData', JSON.stringify(formData));
     console.log('Form data saved to localStorage:', formData);
-    // Aquí puedes cerrar el modal si deseas
     toggleModal();
   };
 
   return (
-    <section className='w-full bg-sky-950'>
-      <div className='max-container flex justify-between items-center text-white py-28 max-lg:py-24 max-md:flex-col max-md:items-start max-md:gap-5 max-md:py-16 max-sm:py-12 padding-x'>
-        <div className='text-6xl font-semibold leading-[70px] max-lg:text-4xl max-w-[50%] max-lg:max-w-[100%] max-sm:text-3xl'>
-          <h1>April membership offer available Now</h1>
-        </div>
-
-        <button onClick={toggleModal} className='py-4 px-9 text-xl group relative text-white bg-[orangered] rounded-sm'>
-          <div className='buttonDiv'></div>
-          <span className='buttonSpan'>MORE SERVICES</span>
-        </button>
-      </div>
-      {/* Main modal */}
+    <section>
       {isModalOpen && (
         <div
           className="fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full bg-gray-900 bg-opacity-50 over"
@@ -224,8 +207,8 @@ const Offer = () => {
           </div>
         </div>
       )}
-    </section>
+      </section>
   );
 };
 
-export default Offer;
+export default Subscription;

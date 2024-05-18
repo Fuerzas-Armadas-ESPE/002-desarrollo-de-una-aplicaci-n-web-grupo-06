@@ -3,7 +3,7 @@ import logo from "../assets/logo-2.png";
 import { navLinks } from "../Data/Data";
 import { FiMenu } from "react-icons/fi";
 
-const Nav = ({ nav }) => {
+const Nav = ({ nav, toggleModal }) => {
   const [openNav, setOpenNav] = useState(false);
 
   return (
@@ -49,7 +49,8 @@ const Nav = ({ nav }) => {
               href="#inscripcion"
               onClick={() => setOpenNav(false)}
             >
-              <button className=" py-4 px-9 text-xl group relative text-white bg-[orangered] rounded-sm">
+              <button className=" py-4 px-9 text-xl group relative text-white bg-[orangered] rounded-sm"
+              onClick={toggleModal}>
                 <div className=" buttonDiv"></div>
                 <span className="buttonSpan">INSCRIBETE AHORA</span>
               </button>

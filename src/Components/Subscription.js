@@ -36,7 +36,7 @@ const Subscription = ({isModalOpen, toggleModal}) => {
           aria-hidden="true"
         >
           <div className="flex relative over p-0 w-full max-w-5xl bg-white rounded-lg shadow">
-            <div className='flex-none w-96 relative'>
+            <div className='flex-none w-96 relative max-lg:w-0'>
               <img src={imgForm} alt="formImg" className='absolute inset-0 w-full h-full object-cover rounded-l-lg' />
             </div>
             {/* Modal header */}

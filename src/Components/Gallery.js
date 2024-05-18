@@ -1,65 +1,53 @@
 import React from 'react'
-
-import {AiOutlineArrowRight} from "react-icons/ai"
+import img1 from "../assets/img-18.jpg"
+import img2 from "../assets/img-19.jpg"
+import img3 from "../assets/img-20.jpg"
+import img4 from "../assets/img-21.jpg"
+import img5 from "../assets/img-1.jpg"
 
 const Gallery = () => {
+
+  const images = [img1, img2, img3, img4, img5]
+
+  const [active, setActive] = React.useState(img1)
+
   return (
-    <section id='gallery' className=' min-h-screen w-full grid grid-cols-4 grid-rows-2 gap-7 max-lg:grid-cols-2 max-lg:grid-rows-4 max-lg:gap-4 max-sm:grid-cols-1 max-sm:grid-rows-5 max-sm:gap-x-0'>
-
-      <div className=' group h-screen row-span-2 col-span-2 max-lg:row-span-2 max-lg:h-[49vh] relative bg-gallery-pattern1 after:absolute after:top-0 after:left-[-100%] hover:after:left-0 after:w-full after:h-full after:bg-gradient-to-r from-black bg-cover max-sm:row-span-1 max-sm:col-span-1 '>
-        <div className='w-full group-hover:left-[50%] duration-300 absolute top-[50%] left-[-50%] translate-x-[-50%] translate-y-[-50%] text-center z-10'>
-          <div className=' bg-[#f04e3c] rounded-full p-4 max-lg:p-2 text-white text-2xl mb-7 max-lg:mb-3 w-fit m-auto cursor-pointer hover:bg-white hover:text-[#f04e3c] duration-300'>
-            <AiOutlineArrowRight />
+    <section id='services' className='grid grid-cols-2 w-full min-h-screen bg-service-pattern bg-cover bg-fixed items-center justify-center max-lg:bg-center max-sm:bg-center'>
+      <div className='w-full max-w-6xl padding-hero-y padding-x col-span-2 sm:col-span-1'>
+        <div className='flex justify-between items-end max-lg:flex-col max-lg:items-start max-lg:gap-5 max-sm:mb-20'>
+          <div>
+            <p className='text-[#f04e3c] relative before:absolute before:w-20 before:h-1 before:bg-[#f04e3c] before:top-[50%] before:left-0 pl-24 text-2xl before:translate-y-[-50%]'>Galeria</p>
+            <div className='text-6xl text-white mt-8 leading-[60px] max-w-[65%] font-semibold max-xl:text-4xl max-lg:text-5xl max-lg:leading-[60px] max-lg:max-w-[100%] max-sm:text-3xl'>
+              <h1>Conoce más nuestro gimnasio</h1>
+            </div>
           </div>
-          <h1 className=' text-4xl text-white font-medium mb-2'>Best fitness gallery</h1>
-          <p className=' font text-xl text-slate-200 '>Fitness Body</p>
         </div>
       </div>
-
-      <div className=' group h-full w-full relative overflow-hidden bg-gallery-pattern2 after:absolute after:top-0 after:left-[-100%] hover:after:left-0 after:w-full after:h-full after:bg-gradient-to-r from-black bg-cover'>
-      
-        <div className='w-full absolute top-[50%] left-[-50%] opacity-0 group-hover:left-[50%] group-hover:opacity-[1] translate-x-[-50%] translate-y-[-50%] text-center duration-300 z-10 '>
-          <div className=' bg-[#f04e3c] max-lg:mb-3 max-lg:p-2 rounded-full p-4 text-white text-2xl mb-7 w-fit m-auto cursor-pointer hover:bg-white hover:text-[#f04e3c] duration-300'>
-            <AiOutlineArrowRight />
+      <div className='flex justify-center items-center w-full col-span-2 sm:col-span-1'>
+        <div className='max-w-3xl w-full'>
+          <div className="grid gap-4">
+            <div>
+              <img
+                className="h-auto w-full max-w-full rounded-lg object-cover object-center md:h-[480px]"
+                src={active}
+                alt=""
+              />
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {images.map((image, index) => (
+                <div key={index}>
+                  <img
+                    onClick={() => setActive(image)}
+                    src={image}
+                    className="h-20 max-w-full cursor-pointer rounded-lg object-cover object-center"
+                    alt="gallery-image"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-          <h1 className=' text-4xl text-white font-medium mb-2'>Best fitness gallery</h1>
-          <p className=' font text-xl text-slate-200 '>Fitness Body</p>
         </div>
       </div>
-
-      <div className='group h-full w-full relative overflow-hidden bg-gallery-pattern3 bg-right after:absolute after:top-0 after:left-[-100%] hover:after:left-0 after:w-full after:h-full after:bg-gradient-to-r from-black bg-cover'>
-      
-        <div className='w-full absolute top-[50%] left-[-50%] opacity-0 group-hover:left-[50%] group-hover:opacity-[1] translate-x-[-50%] translate-y-[-50%] text-center duration-300 z-10 '>
-          <div className=' bg-[#f04e3c] max-lg:mb-3 max-lg:p-2 rounded-full p-4 text-white text-2xl mb-7 w-fit m-auto cursor-pointer hover:bg-white hover:text-[#f04e3c] duration-300'>
-            <AiOutlineArrowRight />
-          </div>
-          <h1 className=' text-4xl text-white font-medium mb-2'>Best fitness gallery</h1>
-          <p className=' font text-xl text-slate-200 '>Fitness Body</p>
-        </div>
-      </div>
-
-      <div className='group  h-full w-full relative overflow-hidden bg-gallery-pattern4 after:absolute after:top-0 after:left-[-100%] hover:after:left-0 after:w-full after:h-full after:bg-gradient-to-r from-black bg-cover'>
-
-        <div className='w-full absolute top-[50%] left-[-50%] opacity-0 group-hover:left-[50%] group-hover:opacity-[1] translate-x-[-50%] translate-y-[-50%] text-center duration-300 z-10 '>
-          <div className=' bg-[#f04e3c] max-lg:mb-3 max-lg:p-2 rounded-full p-4 text-white text-2xl mb-7 w-fit m-auto cursor-pointer hover:bg-white hover:text-[#f04e3c] duration-300'>
-            <AiOutlineArrowRight />
-          </div>
-          <h1 className=' text-4xl text-white font-medium mb-2'>Best fitness gallery</h1>
-          <p className=' font text-xl text-slate-200 '>Fitness Body</p>
-        </div>
-      </div>
-
-      <div className='group  h-full w-full relative overflow-hidden bg-gallery-pattern5 after:absolute after:top-0 after:left-[-100%] hover:after:left-0 after:w-full after:h-full after:bg-gradient-to-r from-black bg-cover'>
-        
-        <div className='w-full absolute top-[50%] left-[-50%] opacity-0 group-hover:left-[50%] group-hover:opacity-[1] translate-x-[-50%] translate-y-[-50%] text-center duration-300 z-10 '>
-          <div className=' bg-[#f04e3c] max-lg:mb-3 max-lg:p-2 rounded-full p-4 text-white text-2xl mb-7 w-fit m-auto cursor-pointer hover:bg-white hover:text-[#f04e3c] duration-300'>
-            <AiOutlineArrowRight />
-          </div>
-          <h1 className=' text-4xl text-white font-medium mb-2'>Best fitness gallery</h1>
-          <p className=' font text-xl text-slate-200 '>Fitness Body</p>
-        </div>
-      </div>
-
     </section>
   )
 }

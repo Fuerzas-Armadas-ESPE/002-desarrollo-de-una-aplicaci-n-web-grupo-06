@@ -10,6 +10,7 @@ import Footer from './Components/Footer'
 import HeroSection from './Components/HeroSection'
 import { ContactUs } from './Components/ContactUs'
 import Subscription from './Components/Subscription'
+import SubSection from './Components/SubSection'
 
 const App = () => {
 
@@ -38,12 +39,9 @@ const App = () => {
         <Nav nav={nav} toggleModal={toggleModal}/>
         <HeroSection />
         <About />
-        <Services />
-        <Client />
         <Gallery />
-        <TeamMembers />
+        <SubSection />
         <Subscription isModalOpen={isModalOpen} toggleModal={toggleModal}/>
-        <TimeSchedule />
         <ContactUs />
         <Footer nav={nav}/>
     </div>

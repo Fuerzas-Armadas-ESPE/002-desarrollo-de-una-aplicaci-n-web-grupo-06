@@ -2,7 +2,7 @@
 
 <p id="description">Desarrollo de aplicación web utilizando la librería React, en conjunto con TailwindCSS</p>
 
-<p>Link a la aplicación web: </p>
+<p>Link a la aplicación web: https://pagina-web-gimnasio.vercel.app/ </p>
 
 <h2>🧐 Características</h2>
 

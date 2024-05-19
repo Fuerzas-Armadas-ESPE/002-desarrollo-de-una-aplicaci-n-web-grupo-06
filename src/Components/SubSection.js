@@ -4,7 +4,7 @@ import foto3 from "../assets/foto3.png";
 import foto2 from "../assets/foto2.png";
 import foto1 from "../assets/foto1.png";
 
-const SubSection = ({ update }) => {
+const SubSection = ({ update, toggleModal }) => {
     const [subData, setSubData] = useState(() => {
         const data = window.localStorage.getItem('formData');
         return data ? JSON.parse(data) : null;
@@ -69,12 +69,21 @@ const SubSection = ({ update }) => {
     };
 
     return (
-        <div className="max-w-xxl mt-20 mb-0 mr-10 ml-0 p-10 flex flex-col md:flex-row md:space-x-8 m-10">
+        <div id="suscripcion" className="max-w-xxl mt-20 mb-0 mr-10 ml-0 p-10 flex flex-col md:flex-row md:space-x-8 m-10">
             <div className="flex-1 md:w-1/2">
                 <p className='text-[#f04e3c] text-4xl font-bold relative before:absolute before:w-20 before:h-1 before:bg-[#f04e3c] before:top-[50%] before:left-0 pl-24 before:translate-y-[-50%] mb-10'>SUSCRIPCIÓN</p>
                 {!subData ? (
                     <div className="bg-white shadow-md rounded-lg p-6 mt-4 md:mt-0">
                         <p>No hay datos de suscripción disponibles.</p>
+                        <br></br>
+                        <br></br>
+                        <button
+                            className=" py-4 px-7 text-xl group relative text-white bg-[orangered] rounded-sm"
+                            onClick={toggleModal}
+                        >
+                            <div className=" buttonDiv"></div>
+                            <span className="buttonSpan">INSCRIBETE AHORA</span>
+                        </button>
                     </div>
                 ) : (
                     <div className="bg-white shadow-md rounded-lg p-10 mt-4 md:mt-0">

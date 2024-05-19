@@ -34,10 +34,10 @@ const App = () => {
   return (
     <div className='App'>
         <Nav nav={nav} toggleModal={toggleModal}/>
-        <HeroSection />
+        <HeroSection toggleModal={toggleModal}/>
         <About />
         <Gallery />
-        <SubSection />
+        <SubSection toggleModal={toggleModal}/>
         <Subscription isModalOpen={isModalOpen} toggleModal={toggleModal}/>
         <ContactUs />
         <Footer nav={nav}/>

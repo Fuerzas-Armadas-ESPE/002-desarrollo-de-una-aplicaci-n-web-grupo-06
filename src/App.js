@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import Nav from "./Components/Nav";
-import About from "./Components/About";
-import Services from "./Components/Services";
-import Client from "./Components/Client";
-import Gallery from "./Components/Gallery";
-import TeamMembers from "./Components/TeamMembers";
-import TimeSchedule from "./Components/TimeSchedule";
-import Footer from "./Components/Footer";
-import HeroSection from "./Components/HeroSection";
-import { ContactUs } from "./Components/ContactUs";
-import Subscription from "./Components/Subscription";
+import React, { useState } from 'react'
+import Nav from './Components/Nav'
+import About from './Components/About'
+import Services from './Components/Services'
+import Client from './Components/Client'
+import Gallery from './Components/Gallery'
+import TeamMembers from './Components/TeamMembers'
+import TimeSchedule from './Components/TimeSchedule'
+import Footer from './Components/Footer'
+import HeroSection from './Components/HeroSection'
+import { ContactUs } from './Components/ContactUs'
+import Subscription from './Components/Subscription'
+import SubSection from './Components/SubSection'
 
 const App = () => {
   const [nav, setNav] = useState(false);
@@ -31,18 +32,15 @@ const App = () => {
   });
 
   return (
-    <div className="App">
-      <Nav nav={nav} toggleModal={toggleModal} />
-      <HeroSection toggleModal={toggleModal} />
-      <About />
-      <Services />
-      <Client />
-      <Gallery />
-      <TeamMembers />
-      <Subscription isModalOpen={isModalOpen} toggleModal={toggleModal} />
-      <TimeSchedule />
-      <ContactUs />
-      <Footer nav={nav} />
+    <div className='App'>
+        <Nav nav={nav} toggleModal={toggleModal}/>
+        <HeroSection />
+        <About />
+        <Gallery />
+        <SubSection />
+        <Subscription isModalOpen={isModalOpen} toggleModal={toggleModal}/>
+        <ContactUs />
+        <Footer nav={nav}/>
     </div>
   );
 };

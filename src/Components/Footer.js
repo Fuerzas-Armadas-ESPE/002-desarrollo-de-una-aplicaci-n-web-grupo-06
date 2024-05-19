@@ -1,5 +1,4 @@
 import React from 'react'
-import { footer } from '../Data/Data'
 import logo from "../assets/logo-2.png"
 
 import {BiLogoFacebook} from "react-icons/bi"

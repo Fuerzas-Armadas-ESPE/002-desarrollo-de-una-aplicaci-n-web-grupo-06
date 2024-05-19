@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import Nav from "./Components/Nav";
 import About from "./Components/About";
-import Services from "./Components/Services";
-import Client from "./Components/Client";
 import Gallery from "./Components/Gallery";
-import TeamMembers from "./Components/TeamMembers";
-import TimeSchedule from "./Components/TimeSchedule";
 import Footer from "./Components/Footer";
 import HeroSection from "./Components/HeroSection";
 import { ContactUs } from "./Components/ContactUs";

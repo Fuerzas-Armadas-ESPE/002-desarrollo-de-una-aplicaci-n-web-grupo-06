@@ -40,7 +40,7 @@ const Footer = ({nav}) => {
       </div>
 
       <div className=' border-t border-[#3e3e3e] max-container pt-10 pb-16 text-[#c4c4c4] text-center px-4'>
-        <p className=' font'>Copyright &copy;{date} All rights reserved | Made by <a className='font text-[red]' href="https://vijayaragavendran.netlify.app/">EPA</a></p>
+        <p className=' font'>Copyright &copy;{date} All rights reserved | Made by <a className='font text-[red]' href="https://github.com/Fuerzas-Armadas-ESPE/002-desarrollo-de-una-aplicaci-n-web-grupo-06">EPA</a></p>
       </div>
     </section>
   )
